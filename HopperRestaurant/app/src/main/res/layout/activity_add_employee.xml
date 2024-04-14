@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?><!--Maxlength: -->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.EditEmployeeActivity">
+
+    <TextView
+        android:id="@+id/requiredHint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/required_field"
+        android:textColor="@color/red"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/firstNameReqHint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="@string/asterisk"
+        android:textColor="@color/red"
+        app:layout_constraintEnd_toStartOf="@+id/firstNameContainer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/firstNameContainer" />
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/firstNameContainer"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="20dp"
+        app:helperTextTextColor="@color/design_default_color_error"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/firstNameEditText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/first_name"
+            android:inputType="textPersonName"
+            android:lines="1"
+            android:maxLength="50" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/lastNameReqHint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="@string/asterisk"
+        android:textColor="@color/red"
+        app:layout_constraintEnd_toStartOf="@+id/lastNameContainer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/lastNameContainer" />
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/lastNameContainer"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="10dp"
+        app:helperTextTextColor="@color/design_default_color_error"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/firstNameContainer">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/lastNameEditText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/last_name"
+            android:inputType="textPersonName"
+            android:lines="1"
+            android:maxLength="50" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/nickNameContainer"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="10dp"
+        app:helperTextTextColor="@color/design_default_color_error"
+        app:layout_constraintEnd_toStartOf="@id/phoneNumContainer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lastNameContainer">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/nickNameEditText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/nick_name"
+            android:inputType="textPersonName"
+            android:lines="1"
+            android:maxLength="13" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/emailReqHint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="@string/asterisk"
+        android:textColor="@color/red"
+        app:layout_constraintEnd_toStartOf="@+id/emailContainer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/emailContainer" />
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/emailContainer"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="10dp"
+        app:helperTextTextColor="@color/design_default_color_error"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/phoneNumContainer">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/emailEditText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress"
+            android:lines="1"
+            android:maxLength="50" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/phoneNumReqHint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="25dp"
+        android:text="@string/asterisk"
+        android:textColor="@color/red"
+        app:layout_constraintEnd_toStartOf="@+id/phoneNumContainer"
+        app:layout_constraintStart_toEndOf="@id/nickNameContainer"
+        app:layout_constraintTop_toTopOf="@+id/phoneNumContainer" />
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/phoneNumContainer"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="10dp"
+        app:helperTextTextColor="@color/design_default_color_error"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/nickNameContainer"
+        app:layout_constraintTop_toBottomOf="@+id/lastNameContainer">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/phoneNumEditText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="@string/phone_number"
+            android:inputType="phone"
+            android:lines="1"
+            android:maxLength="14" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:id="@+id/canOpenCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="5dp"
+        android:text="@string/can_open"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emailContainer" />
+
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:id="@+id/cacCloseCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="@string/can_close"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/canOpenCheckBox"
+        app:layout_constraintTop_toBottomOf="@+id/emailContainer" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/addBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:enabled="false"
+        android:text="@string/add_employee"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/monTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/mon"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/monSpinner"
+        app:layout_constraintEnd_toEndOf="@+id/monSpinner"
+        app:layout_constraintStart_toStartOf="@+id/monSpinner" />
+    <Spinner
+        android:id="@+id/monSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:background="@drawable/spinner_border"
+        app:layout_constraintBottom_toTopOf="@+id/addBtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/canOpenCheckBox"
+        app:layout_constraintVertical_bias="0.12" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tueTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tue"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/tueSpinner"
+        app:layout_constraintEnd_toEndOf="@+id/tueSpinner"
+        app:layout_constraintStart_toStartOf="@+id/tueSpinner" />
+    <Spinner
+        android:id="@+id/tueSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:background="@drawable/spinner_border"
+        app:layout_constraintBottom_toTopOf="@+id/addBtn"
+        app:layout_constraintStart_toEndOf="@+id/monSpinner"
+        app:layout_constraintTop_toBottomOf="@+id/canOpenCheckBox"
+        app:layout_constraintVertical_bias="0.12" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/wedTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/wed"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/wedSpinner"
+        app:layout_constraintEnd_toEndOf="@+id/wedSpinner"
+        app:layout_constraintStart_toStartOf="@+id/wedSpinner" />
+    <Spinner
+        android:id="@+id/wedSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:background="@drawable/spinner_border"
+        app:layout_constraintBottom_toTopOf="@+id/addBtn"
+        app:layout_constraintStart_toEndOf="@+id/tueSpinner"
+        app:layout_constraintTop_toBottomOf="@+id/canOpenCheckBox"
+        app:layout_constraintVertical_bias="0.12" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/thurTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/thur"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/thurSpinner"
+        app:layout_constraintEnd_toEndOf="@+id/thurSpinner"
+        app:layout_constraintStart_toStartOf="@+id/thurSpinner" />
+    <Spinner
+        android:id="@+id/thurSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:background="@drawable/spinner_border"
+        app:layout_constraintBottom_toTopOf="@+id/addBtn"
+        app:layout_constraintStart_toEndOf="@+id/wedSpinner"
+        app:layout_constraintTop_toBottomOf="@+id/canOpenCheckBox"
+        app:layout_constraintVertical_bias="0.12" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/friTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/fri"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/friSpinner"
+        app:layout_constraintEnd_toEndOf="@+id/friSpinner"
+        app:layout_constraintStart_toStartOf="@+id/friSpinner" />
+    <Spinner
+        android:id="@+id/friSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:background="@drawable/spinner_border"
+        app:layout_constraintBottom_toTopOf="@+id/addBtn"
+        app:layout_constraintStart_toEndOf="@+id/thurSpinner"
+        app:layout_constraintTop_toBottomOf="@+id/canOpenCheckBox"
+        app:layout_constraintVertical_bias="0.12" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/satTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sat"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/satSpinner"
+        app:layout_constraintEnd_toEndOf="@+id/satSpinner"
+        app:layout_constraintStart_toStartOf="@+id/satSpinner" />
+    <Spinner
+        android:id="@+id/satSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/spinner_border"
+        app:layout_constraintBottom_toTopOf="@+id/addBtn"
+        app:layout_constraintStart_toStartOf="@id/tueSpinner"
+        app:layout_constraintTop_toBottomOf="@+id/tueSpinner"
+        app:layout_constraintVertical_bias="0.55"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/sunTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sun"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/sunSpinner"
+        app:layout_constraintEnd_toEndOf="@+id/sunSpinner"
+        app:layout_constraintStart_toStartOf="@+id/sunSpinner" />
+    <Spinner
+        android:id="@+id/sunSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/spinner_border"
+        app:layout_constraintBottom_toTopOf="@+id/addBtn"
+        app:layout_constraintStart_toStartOf="@id/thurSpinner"
+        app:layout_constraintTop_toBottomOf="@+id/thurSpinner"
+        app:layout_constraintVertical_bias="0.55"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
